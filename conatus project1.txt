@@ -1,0 +1,888 @@
+#print hello world
+
+print("hello world")
+output-->    hello world
+
+# add to known numbers
+
+print(2 + 5)
+output-->    7
+
+#take input from user
+
+a=int(input("enter number"))
+b=int(input("enter number"))
+print("a+b=",a+b)
+
+output-->    enter number>? 2
+             enter number>? 5
+             a+b= 7
+
+#list- declaration and access its items
+
+mylist=["square","cube","circle"]
+print(mylist[2])
+print(mylist[-2])
+                       /* negative indexing "circle"= -1 ; "cube"= -2 ; "square"= -3 */
+output-->   circle
+            cube
+
+#list- range of indexes 
+
+mylist=["square","cube","circle"]
+print(mylist[1:])
+print(mylist[-3:-1])
+
+output-->   ['cube', 'circle']
+            ['square', 'cube']
+
+#list- change the item
+
+mylist=["square","cube","circle"]
+mylist[2]="rectangle"
+print(mylist)
+
+output-->   ['square', 'cube', 'rectangle']
+
+#list- length
+mylist=["square","cube","circle"]
+print(len(mylist))
+output-->   3
+
+#list- add items
+
+mylist=["square","cube","circle"]
+mylist.insert(1,"circle")
+print(mylist)
+
+output-->   ['square', 'circle', 'cube', 'circle']
+
+#list- remove an items
+
+mylist=["square","cube","circle"]
+mylist.pop(2)
+print(mylist)
+
+output-->   ['square', 'cube']
+
+#list- clear a list
+
+mylist=["square","cube","circle"]
+mylist.clear()
+print(mylist)
+
+output-->   []
+
+#list- copy a list
+
+mylist=["square","cube","circle"]
+list=mylist.copy()
+print(list)
+
+output-->   ['square', 'cube', 'circle']
+
+#list- add two list
+
+list1=["square","cube","circle"]
+list2=["rectangle","parallelogram","rhombus"]
+list3=list1+list2
+print(list3)
+
+output-->    ['square', 'cube', 'circle', 'rectangle', 'parallelogram', 'rhombus']
+
+#string-input a string and assign it to a variable
+
+a=str(input("enter the string"))
+b="world"
+print(a)
+print(b)
+
+output-->    enter the string>? hello
+             hello
+             world
+
+#string-string are array
+
+a="world"
+print(a[2])
+
+output-->    r
+
+#string-check if a phase is in string or not
+
+a="hello world , this is basic python programming"
+x="thon" in a
+print(x)
+
+output-->    True
+
+#string-concatenation
+
+a="hello"
+b="world"
+c=a+b
+print(c)
+print(a*3)
+print(a+b+str(3))               /*to add an integer to string*/
+
+output-->    helloworld
+             hellohellohello
+             helloworld3
+
+#string-formatting
+
+name="john"
+print("my name is %s !"%name)
+print("my name is {} !".format("lily"))
+txt="we have {:<8} pencil"
+print(txt.format(49))
+txt="we have {:>8} pencil"
+print(txt.format(49))
+txt="we have {:^8} pencil"
+print(txt.format(49))
+print(name[0:3])
+
+output-->    my name is john !
+             my name is lily !
+             we have 49       pencil
+             we have       49 pencil
+             we have    49    pencil
+             joh
+
+#string-built-in methods
+
+st="hello world "
+print(st.lower())
+print(st.upper())
+print(st.capitalize())
+print(st.count("l"))
+print(st.count("hello"))
+print(st.find("l"))
+print(st.find("z"))
+print(st.islower())
+print(st.isupper())
+st.replace("hello","hi")
+print(st)
+print(st.startwith("h))
+
+st1="12345ft"
+print(st1.isalpha())
+print(st1.isdigit())
+print(st1.isalnum())
+print(''.join(reversed(st1)))             #reversing of string function
+
+output-->    hello world 
+	     HELLO WORLD 	
+             Hello world 
+             3
+             1
+             2
+            -1
+            True
+            False
+            hi world
+            True
+            False
+            False
+            True
+            tf54321
+
+
+# tuples
+
+tup=("jan","feb","march","april","may","june");           #accessing tuple element
+print(tup[2])
+
+tup1=(1,2,3);                                             #comparing tuples
+tup2=(4,5,6);
+if(tup1>tup2):
+    print("tup1 is bigger")
+else:
+    print("tup2 is bigger")
+
+tup3=tup1+tup2                                            #updating tuples
+print(tup3)
+
+del tup3                                                  #deleting tuple
+
+print(len(tup))                                           #tuple built-in function
+print(tup1*3)
+print(tup[-2])                                            #slicing of tuple
+print(tup[1:5])
+for x in tup2:                                            #for function on tuple
+    print(x)
+
+output-->     march
+              tup2 is bigger
+              (1, 2, 3, 4, 5, 6)
+               6
+              (1, 2, 3, 1, 2, 3, 1, 2, 3)
+              may
+              ('feb', 'march', 'april', 'may')
+              4
+              5
+              6
+
+# python dictionary
+
+dict={'charlie':18,'tim':12,'tiffany':22,'robert':25}
+print(dict['tiffany'])                                     #accessing dictionary elements
+boys={'rohan':5,'raghav':7,'madhav':11,'aditya':13}
+girls={'mahi':4,'palak':7,'rashi':9,'avni':15}
+studentx=boys.copy()                                       #copy a dictionary
+studenty=girls.copy()
+print(studentx)
+print(studenty)
+
+dict.update({'renesa':21})                                 #update a dictionary
+print(dict)
+
+del dict['tim']                                            #deleting a deictionary item
+print(dict)
+
+print("student name %s"%dict.items())
+print("student name %s"%list(dict.items()))
+
+print("length=%d"%len(dict))                               #built-in functions
+print("variable type=%s"%type(dict))
+print(str(dict))
+print(dict.values())
+
+output-->        22
+                 {'rohan': 5, 'raghav': 7, 'madhav': 11, 'aditya': 13}
+                 {'mahi': 4, 'palak': 7, 'rashi': 9, 'avni': 15}
+                 {'charlie': 18, 'tim': 12, 'tiffany': 22, 'robert': 25, 'renesa': 21}
+                 {'charlie': 18, 'tiffany': 22, 'robert': 25, 'renesa': 21}
+                 student name dict_items([('charlie', 18), ('tiffany', 22), ('robert', 25), ('renesa', 21)])
+                 student name [('charlie', 18), ('tiffany', 22), ('robert', 25), ('renesa', 21)]
+                 length=4
+                 variable type=<class 'dict'>
+                 {'charlie': 18, 'tiffany': 22, 'robert': 25, 'renesa': 21}
+                 dict_values([18, 22, 25, 21])
+
+# creating functions
+
+def my_function():  # declaring the function
+    print("hello from my function")
+
+
+my_function()  # calling the function
+
+
+def fact(n):  # function with arguement
+    ans = 1
+    for i in range(1, n + 1):  # for loop
+        ans = ans * i
+    print(ans)
+
+
+a = int(input("enter the number to calculate the factorial"))
+print("answer :-")
+fact(a)
+
+
+def num(n):
+
+    return n*5                              #function returning a value
+
+p = int(input("enter number"))
+q=num(p)
+print(q)
+print("task done")
+
+
+output-->      hello from my function
+               enter the number to calculate the factorial>? 5
+               answer :-
+               120
+               enter number>? 5
+               25
+               task done
+
+#to find wether a number is prime or not using break statement
+
+n=int(input("enter number"))
+i=2
+count=0
+while (i<n):
+    if( n%i==0):
+        count=count+1
+        print("not a prime number")
+        break                                 #break ststement
+    i=i+1
+if(count==0):
+    print("prime number")
+
+#continue statement - laeve 3 in the loop
+
+i=0
+while i<6:
+    i=i+1
+    if i==3:
+        continue
+    print(i)
+
+output-->      enter number>? 5
+               prime number
+               1
+               2
+               4
+               5
+               6
+
+# arrays
+
+flowers = ['tulip', 'lily', 'daisy', 'pancy', 'rose', 'hibiscus', 'lotus']
+print(flowers[1])  # accessing array elements
+print(len(flowers))  # length of array
+for x in flowers:  # looping an array
+    print(x)
+
+flowers.append('sunflower')  # adding elements in array
+print(flowers)
+
+flowers.pop(6)
+print(flowers)
+
+
+# python program to search an element
+
+def search(arr, n):
+    i = 0
+    while (i < len(arr)):
+        if (arr[i] == n):
+            return True
+        i = i + 1
+    return False
+
+
+a = 'lily'
+if search(flowers,a):
+    print("found")
+else:
+    print("not found")
+
+output-->    lily
+             7
+             tulip
+             lily
+             daisy
+             pancy
+             rose
+             hibiscus
+             lotus
+             ['tulip', 'lily', 'daisy', 'pancy', 'rose', 'hibiscus', 'lotus', 'sunflower']
+             ['tulip', 'lily', 'daisy', 'pancy', 'rose', 'hibiscus', 'sunflower']
+             found
+
+# lambda function
+
+x = lambda a, b: a * b
+print(x(5, 6))
+
+output-->    30
+
+# classes
+
+class organization:                     #creating the class
+    x='employee deatils'
+    def __init__(employee,name,age):
+        employee.name=name
+        employee.age=age
+    def myname(person):
+        print("name="+person.name)
+        print("age=%d"%person.age)
+
+p=organization("ramesh",40)             #creating its object
+p.myname()
+p.age=51                                 #modifying the value
+p.myname()
+del p                                    #deleting the object
+
+class employee(organization):            #inheriting a class
+    pass                                 #pass is used when you dont want to modify the parent class
+x=employee("mike",45)
+x.myname()
+#otherwise we can use init function to modify the child class
+
+output-->     name=ramesh
+              age=40
+              name=ramesh
+              age=51
+              name=suresh
+              age=45
+
+
+#matplotlib module
+#basic line graph
+from matplotlib import pyplot as plt
+from matplotlib import style
+plt.plot([1,2,3],[4,5,1])
+plt.title('line graph')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.show()
+
+
+from matplotlib import pyplot as plt
+from matplotlib import style
+#line graph
+style.use("ggplot")
+x1=[5,8,9]
+y1=[12,16,6]
+x2=[6,9,11]
+y2=[6,15,7]
+plt.plot(x1,y1,'g',label='line one',linewidth=5)
+plt.plot(x2,y2,'c',label='line two',linewidth=5)
+plt.title('line graph')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.legend()
+plt.show()
+
+
+from matplotlib import pyplot as plt
+from matplotlib import style
+#bar graph
+plt.bar([1,3,5,7,9],[5,2,7,8,2],label='one')
+plt.bar([2,4,6,8,10],[8,6,2,5,6],label='two')
+plt.legend()
+plt.title('bar graph')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.show()
+
+
+from matplotlib import pyplot as plt
+from matplotlib import style
+#histogram graph
+population=[10,11,22,33,44,55,66,77,88,99,21,66,33,88,56,89,53,96,23,99,11,33,66,44,77,77,77,23,67]
+bin=[10,20,30,40,50,60,70,80,90,100,110]
+plt.hist(population,bin,histtype='bar',rwidth=0.8)
+plt.legend()
+plt.title('histogram graph')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.show()
+
+
+from matplotlib import pyplot as plt
+from matplotlib import style
+# scatter plot
+x = [1, 2, 3, 4, 5, 6, 7, 8]
+y = [5, 2, 4, 2, 1, 4, 5, 2]
+plt.scatter(x, y, label='scatplot', color='k', s=25, marker='o')
+plt.legend()
+plt.title('scatter plot')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.show()
+
+
+from matplotlib import pyplot as plt
+from matplotlib import style
+# stack plot
+days=[1,2,3,4,5]
+sleeping=[7,8,7,6,11]
+eating=[2,3,4,3,2]
+working=[7,8,7,2,2]
+playing=[8,5,7,8,15]
+plt.plot([],[],color='m',label='sleeping',linewidth=5)
+plt.plot([],[],color='c',label='eating',linewidth=5)
+plt.plot([],[],color='r',label='working',linewidth=5)
+plt.plot([],[],color='k',label='playing',linewidth=5)
+plt.stackplot(days,sleeping,eating,working,playing,colors=['m','c','r','k'])
+plt.legend()
+plt.title('stack plot')
+plt.xlabel('x-axis')
+plt.ylabel('y-axis')
+plt.show()
+
+
+from matplotlib import pyplot as plt
+from matplotlib import style
+# pie plot
+slices=[7,2,2,13]
+activities=['sleeping','eating','working','playing']
+cols=['m','c','r','b']
+plt.pie(slices,labels=activities,
+        colors=cols,
+        shadow=True,
+        startangle=90,
+        explode=(0,0.1,0,0),
+        autopct='%1.1f%%')
+plt.title('pie plot')
+plt.show()
+
+
+#numpy module
+
+import numpy as np
+import sys
+S=range(1000)
+print(sys.getsizeof(5)*len(S))
+
+D=np.arange(1000)                              #numpy arrays aquire less memory than a list
+print(D.size*D.itemsize)
+
+output-->    14000
+             4000
+
+
+import numpy as np
+import sys
+import time
+size=10000
+l1=range(size)
+l2=range(size)
+a1=np.arange(size)
+a2=np.arange(size)
+start=time.time()
+result=[(x,y) for x,y in zip(l1,l2)]
+print((time.time()-start)*1000)
+
+start=time.time()
+result=a1+ a2
+print((time.time()-start)*1000)
+
+output-->      7.994651794433594
+               0.0
+
+
+import numpy as np
+a=np.array([(1,2,3),(4,5,6)])
+print(a.ndim)
+print(a.itemsize)
+print(a.dtype)
+print(a.size)
+print(a.shape)
+print(a)
+
+a=a.reshape(3,2)                         #reshaping the array
+print(a)
+print(a[0:3])                             #to print rows from 0 to 3 includong 0th row
+
+p=np.linspace(1,3,5)                     #it gives 5 numbers equally distant between 1 and 3
+print(p)
+
+print(a.max())                            #gives maximum value in array
+print(a.min())                            #gives minimum value in array
+print(a.sum())                            #gives sum of all the elements of the array
+print(np.sqrt(a))                         #square root all the elements of the array
+print(np.std(a))                          #gives standard deviation of array elements
+print(np.exp(a))                          #converts array elements to their exponential
+print(np.log(a))                          #converts array elements to their natural logarithm
+print(np.log10(a))                        #convertd array elements to their logarithm bas 10
+
+output-->     2
+              4
+              int32
+              6
+              (2, 3)
+              [[1 2 3]
+               [4 5 6]]
+              [[1 2]
+               [3 4]
+               [5 6]]
+              [[1 2]
+               [3 4]
+               [5 6]]
+              [1.  1.5 2.  2.5 3. ]
+              6
+              1
+              21
+              [[1.         1.41421356]
+              [1.73205081 2.        ]
+              [2.23606798 2.44948974]]
+              1.707825127659933
+              [[  2.71828183   7.3890561 ]
+               [ 20.08553692  54.59815003]
+               [148.4131591  403.42879349]]
+              [[0.         0.69314718]
+               [1.09861229 1.38629436]
+               [1.60943791 1.79175947]]
+              [[0.         0.30103   ]
+               [0.47712125 0.60205999]
+               [0.69897    0.77815125]]
+
+
+import numpy as np
+a=np.array([(1,2,3),(4,5,6)])
+b=np.array([(1,2,3),(4,5,6)])
+print(a+b)
+print(a-b)
+print(a*b)
+print(a/b)
+print(np.vstack((a,b)))                 #forms vertical array
+print(np.hstack((a,b)))                 #forms horizontal array
+print(a.ravel())
+
+output-->      [[ 2  4  6]
+                [ 8 10 12]]
+               [[0 0 0]
+                [0 0 0]]
+               [[ 1  4  9]
+                [16 25 36]]
+               [[1. 1. 1.]
+                [1. 1. 1.]]
+               [[1 2 3]
+                [4 5 6]
+                [1 2 3]
+                [4 5 6]]
+               [[1 2 3 1 2 3]
+                [4 5 6 4 5 6]]
+               [1 2 3 4 5 6]
+
+
+# pandas module
+
+
+import numpy as np
+import pandas as pd
+
+#accessing excel sheet
+dict = {'name': ['happy', 'soni', 'niharika', 'tanu'],
+        'marks': [92, 87, 89, 67],
+        'city': ['rampur', 'bareilly', 'varanasi', 'kolkata']}
+df = pd.DataFrame(dict)
+print(df)
+df.to_csv('project.csv')  # creates an excel sheet having this data
+df.to_csv('project1.csv', index=False)  # creats an excel sheet haning no index
+print(df.head(2))  # shows first few rows of the dataframe
+print(df.tail(2))  # shows last few rows of the dataframe
+print(df.describe())  # gives information about the dataframe
+ishika = pd.read_csv('train.csv')  # reads excel file in directory
+print(ishika)
+ishika['marks'][0] = 95  #modify the values in excel sheet
+print(ishika)
+ishika.to_csv('train.csv')
+ishika.index = ['first', 'second', 'third', 'fourth']   #change the index values
+print(ishika)
+
+output-->      name  marks      city
+               0     happy     92    rampur
+               1      soni     87  bareilly
+               2  niharika     89  varanasi
+               3      tanu     67   kolkata
+                   name  marks      city
+               0  happy       92    rampur
+               1   soni     87  bareilly
+                      name  marks      city
+               2  niharika     89  varanasi
+               3      tanu     67   kolkata
+                          marks
+               count   4.000000
+               mean   83.750000
+               std    11.354148
+               min    67.000000
+               25%    82.000000
+               50%    88.000000
+               75%    89.750000
+               max    92.000000
+                 Unnamed: 0  Unnamed: 0.1      name  marks      city
+               0           0             0     happy     95    rampur
+               1           1             1      soni     87  bareilly
+               2           2             2  niharika     89  varanasi
+               3           3             3      tanu     67   kolkata
+               C:/Users/LENOVO PC/ishika python/module1.py:18: SettingWithCopyWarning: 
+               A value is trying to be set on a copy of a slice from a DataFrame
+               See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+                 ishika['marks'][0] = 95  #modify the values in excel sheet
+                  Unnamed: 0  Unnamed: 0.1      name  marks      city
+               0           0             0     happy     95    rampur
+               1           1             1      soni     87  bareilly
+               2           2             2  niharika     89  varanasi
+               3           3             3      tanu     67   kolkata
+                        Unnamed: 0  Unnamed: 0.1      name  marks      city
+               first            0             0     happy     95    rampur
+               second           1             1      soni     87  bareilly
+               third            2             2  niharika     89  varanasi
+               fourth           3             3      tanu     67   kolkata
+
+
+import pandas as pd
+import numpy as np
+
+ser=pd.Series(np.random.rand(45))
+print(ser)
+print(type(ser))
+
+output-->       0     0.886992
+                1     0.272539
+                2     0.375543
+                3     0.103829
+                4     0.339149
+                5     0.764696
+                6     0.203185
+                7     0.414343
+                8     0.524994
+                9     0.145380
+               10    0.402608
+               11    0.106692
+               12    0.081508
+               13    0.964084
+               14    0.692541
+               15    0.021204
+               16    0.224135
+               17    0.916644
+               18    0.930587
+               19    0.189338
+               20    0.303256
+               21    0.515204
+               22    0.334434
+               23    0.549194
+               24    0.223767
+               25    0.162373
+               26    0.488541
+               27    0.471626
+               28    0.390520
+               29    0.857542
+               30    0.829513
+               31    0.980366
+               32    0.217349
+               33    0.094685
+               34    0.481489
+               35    0.289624
+               36    0.062073
+               37    0.024007
+               38    0.623110
+               39    0.589995
+               40    0.065265
+               41    0.505044
+               42    0.303433
+               43    0.933916
+               44    0.993797
+               dtype: float64
+               <class 'pandas.core.series.Series'>
+
+
+import pandas as pd
+import numpy as np
+df=pd.DataFrame(np.random.rand(335,5),index=np.arange(335))
+print(df.head())
+print(df.describe())
+print(df.dtypes)
+df[0][0]='ishika'
+print(df.head())
+print(df.to_numpy)
+print(df.T)                         #transpose the array
+
+
+
+import pandas as pd
+import numpy as np
+
+df = pd.DataFrame(np.random.rand(335, 5), index=np.arange(335))
+print(df.head())
+print(df.sort_index(axis=0, ascending=False))
+df.loc[0, 0] = 456
+print(df.head(2))
+print(df.loc[(df[0] < 0.3) & (df[2] > 0.1)])
+print(df.iloc[0, 4])
+print(df.iloc[[0, 1], [1, 2]])
+print(df.drop([0]))
+print(df.drop([1,5],axis=0))
+df.reset_index(drop=True)
+print(df[0].isnull())
+df.loc[:,[1]]=56
+print(df)
+print(df.shape)
+print(df.info)
+
+
+output-->                0         1         2         3         4
+0  0.130099  0.162779  0.641193  0.893091  0.267307
+1  0.590161  0.291377  0.448146  0.325028  0.814258
+2  0.853494  0.334359  0.015884  0.608063  0.708581
+3  0.174276  0.871005  0.943597  0.072090  0.475228
+4  0.237764  0.220327  0.157275  0.564081  0.842102
+            0         1         2         3         4
+334  0.257261  0.218146  0.698784  0.277070  0.939392
+333  0.009336  0.015444  0.836763  0.844798  0.389200
+332  0.596767  0.990875  0.818379  0.351657  0.227302
+331  0.635930  0.357705  0.505146  0.294901  0.048774
+330  0.375505  0.014703  0.037740  0.356916  0.728579
+..        ...       ...       ...       ...       ...
+4    0.237764  0.220327  0.157275  0.564081  0.842102
+3    0.174276  0.871005  0.943597  0.072090  0.475228
+2    0.853494  0.334359  0.015884  0.608063  0.708581
+1    0.590161  0.291377  0.448146  0.325028  0.814258
+0    0.130099  0.162779  0.641193  0.893091  0.267307
+[335 rows x 5 columns]
+            0         1         2         3         4
+0  456.000000  0.162779  0.641193  0.893091  0.267307
+1    0.590161  0.291377  0.448146  0.325028  0.814258
+            0         1         2         3         4
+3    0.174276  0.871005  0.943597  0.072090  0.475228
+4    0.237764  0.220327  0.157275  0.564081  0.842102
+8    0.181866  0.918842  0.830338  0.080962  0.428829
+11   0.072377  0.182950  0.137165  0.677192  0.840242
+15   0.071349  0.958845  0.132044  0.122251  0.442934
+..        ...       ...       ...       ...       ...
+324  0.267456  0.623226  0.667340  0.555748  0.161744
+325  0.008229  0.452047  0.668869  0.620358  0.765561
+329  0.176206  0.974845  0.749531  0.140946  0.631116
+333  0.009336  0.015444  0.836763  0.844798  0.389200
+334  0.257261  0.218146  0.698784  0.277070  0.939392
+[92 rows x 5 columns]
+0.26730654224568484
+          1         2
+0  0.162779  0.641193
+1  0.291377  0.448146
+            0         1         2         3         4
+1    0.590161  0.291377  0.448146  0.325028  0.814258
+2    0.853494  0.334359  0.015884  0.608063  0.708581
+3    0.174276  0.871005  0.943597  0.072090  0.475228
+4    0.237764  0.220327  0.157275  0.564081  0.842102
+5    0.443204  0.523001  0.039456  0.918662  0.900048
+..        ...       ...       ...       ...       ...
+330  0.375505  0.014703  0.037740  0.356916  0.728579
+331  0.635930  0.357705  0.505146  0.294901  0.048774
+332  0.596767  0.990875  0.818379  0.351657  0.227302
+333  0.009336  0.015444  0.836763  0.844798  0.389200
+334  0.257261  0.218146  0.698784  0.277070  0.939392
+[334 rows x 5 columns]
+              0         1         2         3         4
+0    456.000000  0.162779  0.641193  0.893091  0.267307
+2      0.853494  0.334359  0.015884  0.608063  0.708581
+3      0.174276  0.871005  0.943597  0.072090  0.475228
+4      0.237764  0.220327  0.157275  0.564081  0.842102
+6      0.414439  0.224620  0.509486  0.274105  0.782128
+..          ...       ...       ...       ...       ...
+330    0.375505  0.014703  0.037740  0.356916  0.728579
+331    0.635930  0.357705  0.505146  0.294901  0.048774
+332    0.596767  0.990875  0.818379  0.351657  0.227302
+333    0.009336  0.015444  0.836763  0.844798  0.389200
+334    0.257261  0.218146  0.698784  0.277070  0.939392
+[333 rows x 5 columns]
+0      False
+1      False
+2      False
+3      False
+4      False
+       ...  
+330    False
+331    False
+332    False
+333    False
+334    False
+Name: 0, Length: 335, dtype: bool
+              0     1         2         3         4
+0    456.000000  56.0  0.641193  0.893091  0.267307
+1      0.590161  56.0  0.448146  0.325028  0.814258
+2      0.853494  56.0  0.015884  0.608063  0.708581
+3      0.174276  56.0  0.943597  0.072090  0.475228
+4      0.237764  56.0  0.157275  0.564081  0.842102
+..          ...   ...       ...       ...       ...
+330    0.375505  56.0  0.037740  0.356916  0.728579
+331    0.635930  56.0  0.505146  0.294901  0.048774
+332    0.596767  56.0  0.818379  0.351657  0.227302
+333    0.009336  56.0  0.836763  0.844798  0.389200
+334    0.257261  56.0  0.698784  0.277070  0.939392
+[335 rows x 5 columns]
+(335, 5)
+
+
+
+
+
